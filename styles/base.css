@@ -35,7 +35,7 @@ details summary {
   }
 }
 
-/* .color-bg-primary,
+.color-bg-primary,
 .color-bg-default {
   background-color: var(--color-canvas-default, var(--color-bg-primary));
 }
@@ -83,7 +83,7 @@ details summary {
 
 .color-text-tertiary {
   color: var(--color-fg-muted, var(--color-text-tertiary));
-} */
+}
 
 .color-text-link,
 .color-fg-accent,
