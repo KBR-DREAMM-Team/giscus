@@ -76,8 +76,8 @@ const config = withBundleAnalyzer(
       },
       experimental: {
         browsersListForSwc: true,
-        legacyBrowsers: false,
-        esmExternals: false,
+        legacyBrowsers: true,
+        esmExternals: true,
       },
     }),
   ),
