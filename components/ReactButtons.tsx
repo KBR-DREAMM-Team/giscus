@@ -75,6 +75,7 @@ export default function ReactButtons({
           { content, subjectId: id },
           token,
           !!reactionGroups?.[content]?.viewerHasReacted,
+          
         ).then(() => setIsSubmitting(false)),
       );
     },
@@ -112,9 +113,12 @@ export default function ReactButtons({
                   title={t('peopleReactedWith', { count, reaction: t(key), emoji: t('emoji') })}
                 >
                   {count}
-                  {users}
+                  {users.map((user) => user.avatarUrl)}
+                  
                 </span>
+               
               </button> 
+              
             ),
           );
 

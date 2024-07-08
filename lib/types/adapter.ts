@@ -10,7 +10,7 @@ export type IReactionGroups = {
   [key in keyof typeof Reactions]: {
     count: number;
     viewerHasReacted: boolean;
-    users: string[];
+    users: IUser[];
   };
 };
 

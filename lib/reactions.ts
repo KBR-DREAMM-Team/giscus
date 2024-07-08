@@ -1,6 +1,5 @@
 import { IComment, IGiscussion, IReactionGroups, IReply } from './types/adapter';
-import { IUser } from './types/adapter';
-/* */
+
 export const Reactions = {
   THUMBS_UP: '✔️',
   THUMBS_DOWN: '✖️',

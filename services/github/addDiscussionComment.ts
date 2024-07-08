@@ -25,7 +25,11 @@ const ADD_DISCUSSION_COMMENT_QUERY = `
         reactionGroups {
           content
           users {
-            totalCount
+            author{
+              avatarUrl
+              login
+              url
+            }
           }
           viewerHasReacted
         }
