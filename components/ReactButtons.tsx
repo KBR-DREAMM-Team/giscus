@@ -75,7 +75,7 @@ export default function ReactButtons({
           { content, subjectId: id },
           token,
           !!reactionGroups?.[content]?.viewerHasReacted,
-          
+
         ).then(() => setIsSubmitting(false)),
       );
     },
@@ -89,6 +89,7 @@ export default function ReactButtons({
           .filter(([, { count }]) => count > 0)
           .map(
             ([key, { count, viewerHasReacted, users }]:  [Reaction, (typeof reactionGroups)[Reaction]] ) => (
+              
                <button
                 key={key}
                 className={`gsc-direct-reaction-button gsc-social-reaction-summary-item ${
@@ -113,7 +114,7 @@ export default function ReactButtons({
                   title={t('peopleReactedWith', { count, reaction: t(key), emoji: t('emoji') })}
                 >
                   {count}
-                  {users.map((user) => user.avatarUrl)}
+                  {users[0].avatarUrl}
                   
                 </span>
                
