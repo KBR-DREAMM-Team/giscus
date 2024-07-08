@@ -5,7 +5,7 @@ import { useComponentVisible } from '../lib/hooks';
 import { IReactionGroups } from '../lib/types/adapter';
 import { Reaction, Reactions } from '../lib/reactions';
 import { toggleReaction } from '../services/github/toggleReaction';
-import { Trans, useGiscusTranslation } from '../lib/i18n';
+import { Trans, availableLanguages, useGiscusTranslation } from '../lib/i18n';
 
 interface IReactButtonsProps {
   reactionGroups?: IReactionGroups;
@@ -87,8 +87,8 @@ export default function ReactButtons({
       : Object.entries(reactionGroups || {})
           .filter(([, { count }]) => count > 0)
           .map(
-            ([key, { count, viewerHasReacted }]: [Reaction, (typeof reactionGroups)[Reaction]]) => (
-              <button
+            ([key, { count, viewerHasReacted, users }]:  [Reaction, (typeof reactionGroups)[Reaction]] ) => (
+               <button
                 key={key}
                 className={`gsc-direct-reaction-button gsc-social-reaction-summary-item ${
                   viewerHasReacted ? 'has-reacted' : ''
@@ -112,8 +112,9 @@ export default function ReactButtons({
                   title={t('peopleReactedWith', { count, reaction: t(key), emoji: t('emoji') })}
                 >
                   {count}
+                  {users}
                 </span>
-              </button>
+              </button> 
             ),
           );
 
