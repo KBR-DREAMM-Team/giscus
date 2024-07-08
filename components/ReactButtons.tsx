@@ -38,9 +38,11 @@ function PopupInfo({
         />
       </p>
     );
+    //approveProposal Translation in common.json, under reactions
   return (
     <p className="overflow-hidden text-ellipsis whitespace-nowrap m-2">
-      {current ? t(current) : t('pickYourReaction')}
+      
+      {current ? t(current) : t('approveProposal')}
     </p>
   );
 }
