@@ -90,6 +90,7 @@ export default function ReactButtons({
           .map(
             ([key, { count, viewerHasReacted, users }]:  [Reaction, (typeof reactionGroups)[Reaction]] ) => (
               
+    
                <button
                 key={key}
                 className={`gsc-direct-reaction-button gsc-social-reaction-summary-item ${
@@ -115,11 +116,13 @@ export default function ReactButtons({
                 >
                   {count}
                  
-                  
+                
+               {users.map((user, index) => (
+                <img key={index} src={user.avatarUrl} alt={`Avatar of ${user.login}`} />
+              ))}
                 </span>
-               
-              </button> 
-              
+               </button>
+             
             ),
           );
 
