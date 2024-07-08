@@ -1,8 +1,8 @@
 import { IComment, IGiscussion, IReactionGroups, IReply } from './types/adapter';
-/* APPROVE: '✔️',
-  REJECT: '✖️' */
+/* */
 export const Reactions = {
-  THUMBS_UP: '👍',
+  APPROVE: '✔️',
+  REJECT: '✖️'
   
 } as const;
 
