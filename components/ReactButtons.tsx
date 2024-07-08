@@ -114,7 +114,7 @@ export default function ReactButtons({
                   title={t('peopleReactedWith', { count, reaction: t(key), emoji: t('emoji') })}
                 >
                   {count}
-                  {users[0].avatarUrl}
+                 
                   
                 </span>
                
