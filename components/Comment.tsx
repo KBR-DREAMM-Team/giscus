@@ -179,14 +179,14 @@ export default function Comment({
                   {comment.upvoteCount}
                 </span>
               </button>
-              {!hidden ? (
+             {/*  {!hidden ? (
                 <ReactButtons
                   reactionGroups={comment.reactions}
                   subjectId={comment.id}
                   onReact={updateReactions}
                   popoverPosition="top"
                 />
-              ) : null}
+              ) : null} */}
             </div>
             <div className="gsc-comment-replies-count">
               <span className="color-text-tertiary text-xs">

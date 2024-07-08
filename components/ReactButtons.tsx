@@ -133,7 +133,7 @@ export default function ReactButtons({
               variant === 'popoverOnly' ? 'popover-only' : ''
             }`}
           >
-            
+            <SmileyIcon size={16} />
           </summary>
           <div
             className={`color-border-primary color-text-secondary color-bg-overlay gsc-reactions-popover ${popoverPosition} ${
