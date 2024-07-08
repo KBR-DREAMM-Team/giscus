@@ -117,7 +117,7 @@ export default function ReactButtons({
                   {count}
                  
                 
-               {users.map((user, index) => (
+               {users && users.map((user, index) => (
                 <img key={index} src={user.avatarUrl} alt={`Avatar of ${user.login}`} />
               ))}
                 </span>
