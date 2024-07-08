@@ -79,8 +79,8 @@
   "nothingToPreview": "Nothing to preview",
   "approveProposal": "Approve Proposal",
 
-  "APPROVE": "+1",
-  "REJECT": "-1",
+  "THUMBS_UP": "+1",
+  "THUMBS_DOWN": "-1",
   
 
   "COLLABORATOR": "Collaborator",
