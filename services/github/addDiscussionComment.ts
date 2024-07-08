@@ -24,13 +24,13 @@ const ADD_DISCUSSION_COMMENT_QUERY = `
         bodyHTML
         reactionGroups {
           content
-          users {
-            author{
+          users [
+            author {
               avatarUrl
               login
               url
             }
-          }
+          ]
           viewerHasReacted
         }
         replies(first: 100) {
