@@ -88,7 +88,7 @@ export default function ReactButtons({
       : Object.entries(reactionGroups || {})
           .filter(([, { count }]) => count > 0)
           .map(
-            ([key, { count, viewerHasReacted, users }]:  [Reaction, (typeof reactionGroups)[Reaction]] ) => (
+            ([key, { count, viewerHasReacted}]:  [Reaction, (typeof reactionGroups)[Reaction]] ) => (
               
     
                <button
@@ -117,9 +117,7 @@ export default function ReactButtons({
                   {count}
                  
                 
-               {users && users.map((user, index) => (
-                <img key={index} src={user.avatarUrl} alt={`Avatar of ${user.login}`} />
-              ))}
+              
                 </span>
                </button>
              

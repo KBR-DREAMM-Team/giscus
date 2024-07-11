@@ -26,11 +26,6 @@ const ADD_DISCUSSION_COMMENT_QUERY = `
           content
           users {
             totalCount
-            author{
-              avatarUrl
-              login
-              url
-            }
           }
           viewerHasReacted
         }
@@ -52,14 +47,9 @@ const ADD_DISCUSSION_COMMENT_QUERY = `
             bodyHTML
             reactionGroups {
               content
-               users {
+              users {
                 totalCount
-                author{
-                  avatarUrl
-                  login
-                  url
-                }
-          }
+              }
               viewerHasReacted
             }
           }
