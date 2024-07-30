@@ -147,7 +147,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
                 </h4>
               </>
             ) : null}
-            {shouldShowBranding ? (
+            {/* {shouldShowBranding ? (
               <em className="color-text-secondary text-sm">
                 <Trans
                   i18nKey="common:poweredBy"
@@ -163,7 +163,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
                   }}
                 />
               </em>
-            ) : null}
+            ) : null} */}
           </div>
           {data.totalCommentCount > 0 ? (
             <ul className="gsc-right-header BtnGroup">
