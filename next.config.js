@@ -30,7 +30,7 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
   {
-    key: 'X-Content-Type-Options',
+    key: 'X-Type-Options',
     value: 'nosniff',
   },
   {
@@ -39,7 +39,7 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    value: `frame-ancestors 'self';`,
+    value: `frame-ancestors *;`,
   },
 ];
 

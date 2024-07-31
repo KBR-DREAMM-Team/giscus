@@ -41,7 +41,7 @@ export async function getServerSideProps({ query, res }: GetServerSidePropsConte
   res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
 
   if (!assertOrigin(originHost, repoConfig)) {
-    res.setHeader('Content-Security-Policy', `frame-ancestors 'none';`);
+    res.setHeader('Content-Security-Policy', `frame-ancestors *;`);
     res.setHeader('X-Frame-Options', 'DENY');
     return {
       redirect: {
@@ -56,7 +56,7 @@ export async function getServerSideProps({ query, res }: GetServerSidePropsConte
     }
     const originsStr = origins.join(' ');
 
-    res.setHeader('Content-Security-Policy', `frame-ancestors 'self' ${originsStr};`);
+    res.setHeader('Content-Security-Policy', `frame-ancestors * ${originsStr};`);
   }
 
   const defaultCommentOrder = repoConfig.defaultCommentOrder || 'oldest';
