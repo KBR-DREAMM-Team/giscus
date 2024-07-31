@@ -41,7 +41,7 @@ export async function getServerSideProps({ query, res }: GetServerSidePropsConte
   res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
 
   if (!assertOrigin(originHost, repoConfig)) {
-    res.setHeader('Content-Security-Policy', `frame-ancestors 'self';`);
+    res.setHeader('Content-Security-Policy', `frame-ancestors 'self' https://giscus-seven.vercel.app/;`);
     res.setHeader('X-Frame-Options', 'DENY');
     return {
       redirect: {
