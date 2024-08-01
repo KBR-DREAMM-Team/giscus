@@ -30,7 +30,7 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
   {
-    key: 'X-Type-Options',
+    key: 'X-Content-Type-Options',
     value: 'nosniff',
   },
   {
@@ -39,7 +39,7 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    value: `frame-ancestors 'self' https://giscus-seven.vercel.app http://localhost:8080 ;`,
+    value: `frame-ancestors 'self';`,
   },
 ];
 
@@ -76,8 +76,8 @@ const config = withBundleAnalyzer(
       },
       experimental: {
         browsersListForSwc: true,
-        legacyBrowsers: true,
-        esmExternals: true,
+        legacyBrowsers: false,
+        esmExternals: false,
       },
     }),
   ),

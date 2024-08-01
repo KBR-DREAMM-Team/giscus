@@ -77,11 +77,15 @@
   },
   "emoji": "emoji",
   "nothingToPreview": "Nothing to preview",
-  "approveProposal": "Approve Proposal",
 
   "THUMBS_UP": "+1",
   "THUMBS_DOWN": "-1",
-  
+  "LAUGH": "Laugh",
+  "HOORAY": "Hooray",
+  "CONFUSED": "Confused",
+  "HEART": "Love",
+  "ROCKET": "Rocket",
+  "EYES": "Eyes",
 
   "COLLABORATOR": "Collaborator",
   "CONTRIBUTOR": "Contributor",

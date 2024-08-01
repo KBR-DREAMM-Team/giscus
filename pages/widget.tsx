@@ -41,8 +41,8 @@ export async function getServerSideProps({ query, res }: GetServerSidePropsConte
   res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
 
   if (!assertOrigin(originHost, repoConfig)) {
-    res.setHeader('Content-Security-Policy', `frame-ancestors 'self' https://giscus-seven.vercel.app/ http://localhost:8080`);
-    
+    res.setHeader('Content-Security-Policy', `frame-ancestors 'none';`);
+    res.setHeader('X-Frame-Options', 'DENY');
     return {
       redirect: {
         destination: 'https://github.com/orgs/giscus/discussions/1298',
@@ -56,7 +56,7 @@ export async function getServerSideProps({ query, res }: GetServerSidePropsConte
     }
     const originsStr = origins.join(' ');
 
-    res.setHeader('Content-Security-Policy', `frame-ancestors 'self' https://giscus-seven.vercel.app/ ${originsStr};`);
+    res.setHeader('Content-Security-Policy', `frame-ancestors 'self' ${originsStr};`);
   }
 
   const defaultCommentOrder = repoConfig.defaultCommentOrder || 'oldest';

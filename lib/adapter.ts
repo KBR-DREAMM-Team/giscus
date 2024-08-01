@@ -28,7 +28,6 @@ export function adaptReactionGroups(reactionGroups: GReactionGroup[]): IReaction
     acc[group.content] = {
       count: group.users.totalCount,
       viewerHasReacted: group.viewerHasReacted,
-      users: group.users.author,
     };
     return acc;
   }, {}) as IReactionGroups;

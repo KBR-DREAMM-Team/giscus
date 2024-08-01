@@ -5,7 +5,7 @@ import { useComponentVisible } from '../lib/hooks';
 import { IReactionGroups } from '../lib/types/adapter';
 import { Reaction, Reactions } from '../lib/reactions';
 import { toggleReaction } from '../services/github/toggleReaction';
-import { Trans, availableLanguages, useGiscusTranslation } from '../lib/i18n';
+import { Trans, useGiscusTranslation } from '../lib/i18n';
 
 interface IReactButtonsProps {
   reactionGroups?: IReactionGroups;
@@ -38,11 +38,9 @@ function PopupInfo({
         />
       </p>
     );
-    //approveProposal Translation in common.json, under reactions
   return (
     <p className="overflow-hidden text-ellipsis whitespace-nowrap m-2">
-      
-      {current ? t(current) : t('approveProposal')}
+      {current ? t(current) : t('pickYourReaction')}
     </p>
   );
 }
@@ -75,7 +73,6 @@ export default function ReactButtons({
           { content, subjectId: id },
           token,
           !!reactionGroups?.[content]?.viewerHasReacted,
-
         ).then(() => setIsSubmitting(false)),
       );
     },
@@ -88,10 +85,8 @@ export default function ReactButtons({
       : Object.entries(reactionGroups || {})
           .filter(([, { count }]) => count > 0)
           .map(
-            ([key, { count, viewerHasReacted}]:  [Reaction, (typeof reactionGroups)[Reaction]] ) => (
-              
-    
-               <button
+            ([key, { count, viewerHasReacted }]: [Reaction, (typeof reactionGroups)[Reaction]]) => (
+              <button
                 key={key}
                 className={`gsc-direct-reaction-button gsc-social-reaction-summary-item ${
                   viewerHasReacted ? 'has-reacted' : ''
@@ -115,12 +110,8 @@ export default function ReactButtons({
                   title={t('peopleReactedWith', { count, reaction: t(key), emoji: t('emoji') })}
                 >
                   {count}
-                 
-                
-              
                 </span>
-               </button>
-             
+              </button>
             ),
           );
 

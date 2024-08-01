@@ -1,9 +1,14 @@
-import { IComment, IGiscussion, IReactionGroups, IReply, IUser } from './types/adapter';
+import { IComment, IGiscussion, IReactionGroups, IReply } from './types/adapter';
 
-export const Reactions = 
- {
-    THUMBS_UP: '✔️',
-    THUMBS_DOWN: '✖️',
+export const Reactions = {
+  THUMBS_UP: '👍',
+  THUMBS_DOWN: '👎',
+  LAUGH: '😄',
+  HOORAY: '🎉',
+  CONFUSED: '😕',
+  HEART: '❤️',
+  ROCKET: '🚀',
+  EYES: '👀',
 } as const;
 
 export type Reaction = keyof typeof Reactions;

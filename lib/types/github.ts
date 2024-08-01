@@ -22,7 +22,6 @@ export interface GReactionGroup {
   content: keyof typeof Reactions;
   users: {
     totalCount: number;
-    author: GUser[];
   };
   viewerHasReacted: boolean;
 }

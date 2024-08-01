@@ -22,11 +22,7 @@ const ADD_DISCUSSION_REPLY_QUERY = `
         reactionGroups {
           content
           users {
-            author {
-              avatarUrl
-              login
-              url
-            }
+            totalCount
           }
           viewerHasReacted
         }
