@@ -39,7 +39,7 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    value: `frame-ancestors 'self' https://giscus-seven.vercel.app;`,
+    value: `frame-ancestors 'self' https://giscus-seven.vercel.app http://localhost:8080;`,
   },
 ];
 
