@@ -3,7 +3,6 @@ import { IComment, IGiscussion, IReactionGroups, IReply } from './types/adapter'
 export const Reactions = {
   THUMBS_UP: '👍',
   THUMBS_DOWN: '👎',
-
 } as const;
 
 export type Reaction = keyof typeof Reactions;
