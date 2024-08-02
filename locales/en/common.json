@@ -31,7 +31,7 @@
   "loading": "Loading",
   "loadingComments": "Loading comments…",
   "loadingPreview": "Loading preview…",
-  "poweredBy": "– powered by <a>giscus</a>",
+  "poweredBy": "",
   "oldest": "Oldest",
   "newest": "Newest",
   "showPreviousReplies": {
@@ -65,11 +65,11 @@
   "youMustBeSignedInToUpvote": "You must be signed in to upvote.",
   "addReactions": "Add reactions",
   "pleaseWait": "Please wait…",
-  "pickYourReaction": "Pick your reaction",
+  "pickYourReaction": "Add your approval",
   "addTheReaction": "Add {{reaction}} reaction",
   "removeTheReaction": "Remove {{reaction}} reaction",
-  "signInToAddYourReaction": "<a>Sign in</a> to add your reaction.",
-  "youMustBeSignedInToAddReactions": "You must be signed in to add reactions.",
+  "signInToAddYourReaction": "<a>Sign in</a> to add your approval.",
+  "youMustBeSignedInToAddReactions": "You must be signed in to add approval.",
   "peopleReactedWith": {
     "0": "{{count}} people reacted with {{reaction}} {{emoji}}",
     "one": "{{count}} person reacted with {{reaction}} {{emoji}}",
